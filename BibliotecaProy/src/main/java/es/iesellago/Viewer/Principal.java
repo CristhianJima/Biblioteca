@@ -33,6 +33,7 @@ public class Principal extends javax.swing.JFrame {
         tablaUsuario = new javax.swing.JLabel();
         tablaLibros = new javax.swing.JLabel();
         tablaEventos = new javax.swing.JLabel();
+        jpPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -87,10 +88,25 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout jpPanelLayout = new javax.swing.GroupLayout(jpPanel);
+        jpPanel.setLayout(jpPanelLayout);
+        jpPanelLayout.setHorizontalGroup(
+            jpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jpPanelLayout.setVerticalGroup(
+            jpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 475, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(168, 168, 168))
             .addGroup(layout.createSequentialGroup()
                 .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,10 +124,10 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(142, 142, 142)
                         .addComponent(Borrar, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(71, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(168, 168, 168))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jpPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,46 +144,36 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(tablaUsuario)
                     .addComponent(tablaLibros)
                     .addComponent(tablaEventos))
-                .addContainerGap(487, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jpPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void InsertarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InsertarMouseClicked
-        Insertar ins = new Insertar();
-        ins.setVisible(true);
-        ins.setLocationRelativeTo(null);
+
     }//GEN-LAST:event_InsertarMouseClicked
 
     private void ActualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ActualizarMouseClicked
-        Actualizar a = new Actualizar();
-        a.setVisible(true);
-        a.setLocationRelativeTo(null);
+
     }//GEN-LAST:event_ActualizarMouseClicked
 
     private void BorrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BorrarMouseClicked
-        Borrar b = new Borrar();
-        b.setVisible(true);
-        b.setLocationRelativeTo(null);
+
     }//GEN-LAST:event_BorrarMouseClicked
 
     private void tablaUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaUsuarioMouseClicked
-        TablaUsuario tU = new TablaUsuario();
-        tU.setVisible(true);
-        tU.setLocationRelativeTo(null);
+
     }//GEN-LAST:event_tablaUsuarioMouseClicked
 
     private void tablaLibrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaLibrosMouseClicked
-        TablaLibro tL = new TablaLibro();
-        tL.setVisible(true);
-        tL.setLocationRelativeTo(null);
+
     }//GEN-LAST:event_tablaLibrosMouseClicked
 
     private void tablaEventosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaEventosMouseClicked
-        TablaEventos tE = new TablaEventos();
-        tE.setVisible(true);
-        tE.setLocationRelativeTo(null);
+
     }//GEN-LAST:event_tablaEventosMouseClicked
 
     /**
@@ -210,6 +216,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel Borrar;
     private javax.swing.JLabel Insertar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jpPanel;
     private javax.swing.JLabel tablaEventos;
     private javax.swing.JLabel tablaLibros;
     private javax.swing.JLabel tablaUsuario;
