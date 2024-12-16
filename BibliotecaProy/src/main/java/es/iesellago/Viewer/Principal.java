@@ -4,6 +4,9 @@
  */
 package es.iesellago.Viewer;
 
+import java.awt.BorderLayout;
+import javax.swing.JPanel;
+
 /**
  *
  * @author dam
@@ -33,7 +36,7 @@ public class Principal extends javax.swing.JFrame {
         tablaUsuario = new javax.swing.JLabel();
         tablaLibros = new javax.swing.JLabel();
         tablaEventos = new javax.swing.JLabel();
-        jpPanel = new javax.swing.JPanel();
+        pnPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -88,14 +91,14 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jpPanelLayout = new javax.swing.GroupLayout(jpPanel);
-        jpPanel.setLayout(jpPanelLayout);
-        jpPanelLayout.setHorizontalGroup(
-            jpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnPanelLayout = new javax.swing.GroupLayout(pnPanel);
+        pnPanel.setLayout(pnPanelLayout);
+        pnPanelLayout.setHorizontalGroup(
+            pnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        jpPanelLayout.setVerticalGroup(
-            jpPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnPanelLayout.setVerticalGroup(
+            pnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 475, Short.MAX_VALUE)
         );
 
@@ -126,7 +129,7 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(71, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jpPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -145,7 +148,7 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(tablaLibros)
                     .addComponent(tablaEventos))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jpPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -153,27 +156,33 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void InsertarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InsertarMouseClicked
-
+        Insertar I = new Insertar();
+        insertarVentana(I);
     }//GEN-LAST:event_InsertarMouseClicked
 
     private void ActualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ActualizarMouseClicked
-
+        Actualizar A = new Actualizar();
+        insertarVentana(A);
     }//GEN-LAST:event_ActualizarMouseClicked
 
     private void BorrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BorrarMouseClicked
-
+        Borrar B = new Borrar();
+        insertarVentana(B);
     }//GEN-LAST:event_BorrarMouseClicked
 
     private void tablaUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaUsuarioMouseClicked
-
+        TablaUsuarios tU = new TablaUsuarios();
+        insertarVentana(tU);
     }//GEN-LAST:event_tablaUsuarioMouseClicked
 
     private void tablaLibrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaLibrosMouseClicked
-
+        TablaLibros tL = new TablaLibros();
+        insertarVentana(tL);
     }//GEN-LAST:event_tablaLibrosMouseClicked
 
     private void tablaEventosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaEventosMouseClicked
-
+        TablaEventos tE = new TablaEventos();
+        insertarVentana(tE);
     }//GEN-LAST:event_tablaEventosMouseClicked
 
     /**
@@ -210,13 +219,22 @@ public class Principal extends javax.swing.JFrame {
             }
         });
     }
-
+    
+    public void insertarVentana(JPanel panel) {
+        panel.setSize(755, 400);
+        panel.setLocation(0, 0);
+        pnPanel.removeAll();
+        pnPanel.add(panel, BorderLayout.CENTER);
+        pnPanel.revalidate();
+        pnPanel.repaint();
+        
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Actualizar;
     private javax.swing.JLabel Borrar;
     private javax.swing.JLabel Insertar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jpPanel;
+    private javax.swing.JPanel pnPanel;
     private javax.swing.JLabel tablaEventos;
     private javax.swing.JLabel tablaLibros;
     private javax.swing.JLabel tablaUsuario;
