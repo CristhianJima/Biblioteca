@@ -5,6 +5,7 @@
 package es.iesellago.Viewer;
 
 import java.awt.BorderLayout;
+import java.awt.Graphics;
 import javax.swing.JPanel;
 
 /**
@@ -229,6 +230,7 @@ public class Principal extends javax.swing.JFrame {
         pnPanel.repaint();
         
     }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Actualizar;
     private javax.swing.JLabel Borrar;
